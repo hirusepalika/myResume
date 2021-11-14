@@ -1,25 +1,26 @@
 import './App.css';
 import Header from './components/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import BodyComponent from './components/BodyComponent';
+import { BrowserRouter as Router, Switch, Route, Routes} from "react-router-dom";
+import Experiences from './components/Experiences';
 
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      <Header/>
+      <Router>
+        <div>
+          <Header/>
+          <Routes>
+            <Route path="/contact" element={<BodyComponent/>} />
+            <Route path="/experiences" element={<Experiences/>} />
+            {/* <Route exactly component={Page1} pattern="/path1" />
+            <Route exactly component={Page2} pattern="/path2" />
+            <Route exactly component={Page3} pattern="/path3" />
+            <Route component={Page404} /> */}
+          </Routes>
+        </div>
+      </Router>
     </div>
   );
 }
