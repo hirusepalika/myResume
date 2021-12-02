@@ -3,6 +3,7 @@ import BodyComponent from './BodyComponent';
 import Experiences from './Experiences';
 import  {Link} from "react-router-dom";
 
+// LINKING HELP: https://lzomedia.com/blog/error-usehref-may-be-used-only-in-the-context-of-a-router-component/
 const Header = () => {
     return(
         <body className="text-center">
