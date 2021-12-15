@@ -6,6 +6,20 @@ export const ExperienceFullBody = styled.div`
     width: 100%;
     height: 100%;
     box-shadow: inset 0 0 5rem rgb(0 0 0 / 50%);
+
+    .fade-in-section {
+        opacity: 0;
+        transform: translateY(20vh);
+        visibility: hidden;
+        transition: opacity 1200ms ease-out, transform 600ms ease-out,
+            visibility 1200ms ease-out;
+        will-change: opacity, transform, visibility;
+    }
+    .fade-in-section.is-visible {
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+    }
 `;
 
 export const StyledSpeechBubbleMedium = styled.div`
